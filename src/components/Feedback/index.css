@@ -1,0 +1,59 @@
+/* Write your CSS code here. */
+
+.bg-container {
+  height: 100vh;
+  background-image: linear-gradient(to right, #ffeeee, #ffebeb, #ffc0bb);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 50vh;
+  width: 80vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  font-family: 'Roboto';
+  margin-bottom: 22px;
+}
+
+.cont {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini {
+  height: auto;
+  margin-right: 14px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  height: 30px;
+  width: 30pc;
+  background-size: cover;
+}
+
+.name {
+  font-size: 12px;
+  color: black;
+  font-family: 'Roboto';
+}
