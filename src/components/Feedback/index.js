@@ -1,41 +1,42 @@
-// Write your React code here.
 import './index.css'
 
 const Feedback = props => {
   const {resources} = props
   const {emojis, loveEmojiUrl} = resources
-  const {name, imageUrl, id} = emojis
 
-  const onClickImg = () => {
-    ;<li className="container">
-      <img src={loveEmojiUrl} alt="love emoji" className="img" />
-      <h1 className="heading">Thank You</h1>
-      <p className="name">
-        We will use your feedback to improve our customer support performance.{' '}
-      </p>
-    </li>
+  const isTrue = true
+
+  const onClickShow = () => {
+    if (isTrue) {
+      ;<div className="container">
+        <img src={loveEmojiUrl} alt="love emoji" className="img" />
+        <h1 className="heading">Thank You</h1>
+        <p className="name">
+          We will use your feedback to improve our customer support performance.
+        </p>
+      </div>
+    }
   }
 
   return (
-    <li className="bg-container">
+    <div className="bg-container">
       <div className="container">
         <h1 className="heading">
           How satisfied are you with our customer support performance?
         </h1>
-        <div className="cont">
-          <div className="mini">
-            <img
-              key={id}
-              src={imageUrl}
-              alt={name}
-              className="img"
-              onClick={onClickImg}
-            />
-            <p className="name"> {name}</p>
-          </div>
-        </div>
+        <ul className="cont">
+          {emojis.map(emoji => (
+            <li key={emoji.id} className="list">
+              <button type="button" onClick={onClickShow} className="btn">
+                <img src={emoji.imageUrl} className="img" alt={emoji.name} />
+                <br />
+                <span className="name">{emoji.name}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
-    </li>
+    </div>
   )
 }
 
